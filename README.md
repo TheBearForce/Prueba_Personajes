@@ -1,6 +1,31 @@
 # Prueba_Personajes
 esta en dos partes la base de datos y en Visual estudio se dejara un readmy para la creacion de la base
+-----------------------------------------------------------------
+-Para crear la base necesita los siguientes comandos
+-----------------------------------------------------------------
+-- Crear la base de datos
+CREATE DATABASE DBPersonajes;
+GO
 
+-- Usar la base de datos creada
+USE DBPersonajes;
+GO
+
+-- Crear la tabla Personajes
+CREATE TABLE Personajes (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre NVARCHAR(100) NOT NULL,
+    Nivel INT NOT NULL,
+    Tipo NVARCHAR(50) NOT NULL
+);
+
+INSERT INTO Personajes (Nombre, Nivel, Tipo) VALUES 
+('Auron', 15, 'Guerrero'),
+('Luna', 12, 'Maga'),
+('Drako', 18, 'Dragón'),
+('Kira', 10, 'Hechicera'),
+('Ragnar', 20, 'Berserker');
+-------------------------------------------------------------------------------
 Introducción
 El presente informe documenta el desarrollo de una aplicación Web API utilizando el framework ASP.NET Core, junto con Entity Framework Core como tecnología de acceso a datos. El objetivo principal es gestionar una entidad llamada Personaje, la cual representa un personaje dentro de un sistema, permitiendo su almacenamiento, consulta e inserción en una base de datos SQL Server.
 Herramientas y tecnologías
